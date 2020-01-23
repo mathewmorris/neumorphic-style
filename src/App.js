@@ -1,29 +1,42 @@
-import React, { useState } from 'react';
-import { ThemeProvider } from 'styled-components';
+import React from 'react';
+import styled, { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './theme';
+import { useDarkMode } from './useDarkMode';
 import { GlobalStyles } from './global';
+import { Button } from './button';
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 
 function App() {
-  const [theme, setTheme] = useState('light');
+  const [theme, toggleTheme, componentMounted] = useDarkMode();
 
-  // The function that toggles between themes
-  const toggleTheme = () => {
-    // if the theme is not light, then set it to dark
-    if (theme === 'light') {
-      setTheme('dark');
-      // otherwise, it should be light
-    } else {
-      setTheme('light');
-    }
-  };
+  const themeMode = theme === 'light' ? lightTheme : darkTheme;
+
+  if (!componentMounted) {
+    return <div />;
+  }
 
   return (
-    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+    <ThemeProvider theme={themeMode}>
       <>
         <GlobalStyles />
-        <button onClick={toggleTheme}>Toggle theme</button>
-        <h1>It's a light theme!</h1>
-        <footer></footer>
+        <Container>
+          <div style={{ marginRight: 20 }}>
+            <Button theme={theme} onClick={toggleTheme} text="Toggle theme" />
+          </div>
+          <div style={{ marginRight: 20 }}>
+            <Button theme={theme} onClick={toggleTheme} text="Another Toggle" />
+          </div>
+          <div style={{ marginRight: 20 }}>
+            <Button theme={theme} onClick={toggleTheme} text="Boom Shaka" />
+          </div>
+          <div style={{ marginRight: 20 }}>
+            <Button theme={theme} onClick={toggleTheme} text="Laka" />
+          </div>
+        </Container>
       </>
     </ThemeProvider>
   );
