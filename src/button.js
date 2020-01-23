@@ -1,17 +1,39 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
+const Content = styled.span`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding: 8px 12px;
+  border-radius: 6px;
+  height: 34px;
+  width: 100%;
+  color: inherit;
+  transition: all 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 2px solid transparent;
+  user-select: inherit;
+
+  &:focus {
+    outline: none;
+  }
+`;
+
 const StyledButton = styled.button`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: #f2f2f2;
   color: #464646;
   font-weight: 600;
   position: relative;
-  height: 34px;
-  padding: 8px 12px;
+  padding: 0;
   border-radius: 6px;
   border: none;
   transition: all 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: -2px -6px 15px #fff, 2px 6px 15px rgba(0, 0, 0, 0.15);
+  user-select: none;
 
   ${p =>
     p.theme === 'dark' &&
@@ -37,13 +59,23 @@ const StyledButton = styled.button`
     background-color: transparent;
   }
 
-  &:focus {
-    border: none;
-    outline: none;
+  &:hover {
+    cursor: pointer;
 
     &:before {
-      background-color: rgba(0, 150, 255, 0.15);
+      background-color: ${p =>
+        p.theme === 'dark'
+          ? 'rgba(255, 255, 255, 0.02)'
+          : 'rgba(0, 0, 0, 0.02)'};
     }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus > ${Content} {
+    border-color: rgba(50, 100, 200, 0.5);
   }
 
   &:active {
@@ -67,5 +99,9 @@ const StyledButton = styled.button`
 `;
 
 export const Button = props => {
-  return <StyledButton {...props}>{props.text}</StyledButton>;
+  return (
+    <StyledButton {...props}>
+      <Content tabIndex="-1">{props.text}</Content>
+    </StyledButton>
+  );
 };
