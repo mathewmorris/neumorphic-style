@@ -4,8 +4,8 @@
     "jest": true,
     "es6": true
   },
-  "plugins": ["import"],
-  "extends": ["react-app", "plugin:prettier/recommended"],
+  "plugins": ["import", "prettier"],
+  "extends": ["react-app", "prettier"],
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module",
@@ -16,7 +16,8 @@
   "rules": {
     "no-console": "warn",
     "no-eval": "error",
-    "import/first": "error"
+    "import/first": "error",
+    "prettier/prettier": "error"
   },
   "ignorePatterns": ["serviceWorker.js"]
 }
