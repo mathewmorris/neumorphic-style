@@ -1,6 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
+// TODO: Make text move slightly on active state
+
 const Content = styled.span`
   display: inline-flex;
   align-items: center;
@@ -74,9 +76,9 @@ const StyledButton = styled.button`
     outline: none;
   }
 
-  &:focus > ${Content} {
+  /* &:focus > ${Content} {
     border-color: rgba(50, 100, 200, 0.5);
-  }
+  } */
 
   &:active {
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.02);

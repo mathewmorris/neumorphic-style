@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "neumorphic-design",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -65,5 +65,12 @@
     "*.+(json|css|md)": [
       "prettier --write"
     ]
-  }
+  },
+  "keywords": [
+    "theme",
+    "neumorphism",
+    "toggle",
+    "button"
+  ],
+  "description": "Just saw a post talking about neumorphism being the UI/UX of 2020 and wanted to take a shot at it."
 }

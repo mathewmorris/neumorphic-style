@@ -16,7 +16,7 @@ function App() {
   const themeMode = theme === 'light' ? lightTheme : darkTheme;
 
   if (!componentMounted) {
-    return <div />;
+    return null;
   }
 
   return (
@@ -28,13 +28,7 @@ function App() {
             <Button theme={theme} onClick={toggleTheme} text="Toggle theme" />
           </div>
           <div style={{ marginRight: 20 }}>
-            <Button theme={theme} onClick={toggleTheme} text="Another Toggle" />
-          </div>
-          <div style={{ marginRight: 20 }}>
-            <Button theme={theme} onClick={toggleTheme} text="Boom Shaka" />
-          </div>
-          <div style={{ marginRight: 20 }}>
-            <Button theme={theme} onClick={toggleTheme} text="Laka" />
+            <Button theme={theme} text="Just a button" />
           </div>
         </Container>
       </>
