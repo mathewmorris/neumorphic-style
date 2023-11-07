@@ -1,7 +1,7 @@
 # Neumorphic Style
 Just wanted to try my hand at some neumorphic styles. Looks cool. Def hard to make accessible though.
 
-Check it out on [codesandbox](codesandbox.io/s/neumorphic-design-k0iul)
+Check it out on [codesandbox](https://codesandbox.io/s/neumorphic-design-k0iul)
 
 |Light|Dark|
 |-|-|
