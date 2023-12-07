@@ -3,6 +3,8 @@ Just wanted to try my hand at some neumorphic styles. Looks cool. Def hard to ma
 
 Check it out on [codesandbox](https://codesandbox.io/s/neumorphic-design-k0iul)
 
-|Light|Dark|
-|-|-|
-|![image](https://user-images.githubusercontent.com/10860014/120836092-cc311880-c52a-11eb-9056-77e0b7702190.png)|![image](https://user-images.githubusercontent.com/10860014/120836213-ed920480-c52a-11eb-9ce8-e6a299a13a7e.png)|
+
+
+https://github.com/mathewmorris/neumorphic-style/assets/10860014/355a8134-3aef-4c3a-a8c7-2d5c5503a4a6
+
+
